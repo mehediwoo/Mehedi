@@ -1,0 +1,32 @@
+Insert into Database->
+
+$sql="INSERT INTO table(name,shop_name,price) VALUES('$name','$shop_name','$price')";
+$stmt=$conn->query($sql);
+
+<---- End Insert Code--->
+
+View_From_Database->
+
+$sql="SELECT * FROM phone";
+$stmt=$conn->query($sql);
+while ($data=$stmt->fetch()) {
+       $id= $data['id'];
+       }
+<---- End of View From Database----->
+
+Edit Data->
+$sql="UPDATE table SET table_colum='$value1',table_colum='$value2' WHERE id='$id' ";
+$stmt=$conn->query($sql);
+
+<--- End Edit Data--->
+
+Delete Data->
+
+$sql="DELETE FROM table WHERE id='$id' ";
+$stmt=$conn->query($sql);
+<--- End Delete Data----->
+
+Search Data->
+$sql="SELECT * FROM phone WHERE name='$search_btn' OR price='$search_btn' ";
+$stmt= $conn->query($sql);
+
